@@ -134,8 +134,10 @@ header {
 }
 
 .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    text-align: center;
     background-color: aliceblue;
     height: 22vh;
 }
