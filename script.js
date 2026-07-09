@@ -315,6 +315,7 @@ function deleteAll(){
         }
 
         }else{
+           searchValue = searchInput.value.toLowerCase();
               for(let i = 0; i<data.length; i++){
                 if(data[i].category.toLowerCase().includes(searchValue)){
                     
