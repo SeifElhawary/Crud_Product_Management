@@ -286,7 +286,7 @@ function deleteAll(){
         table = '';
         if(searchMood === 'Title'){
             for(let i = 0; i<data.length; i++){
-                if(data[i].name.includes(searchValue)){
+                if(data[i].name.toLowerCase().includes(searchValue)){
                     
                      table += `
                      <tr>
@@ -316,7 +316,7 @@ function deleteAll(){
 
         }else{
               for(let i = 0; i<data.length; i++){
-                if(data[i].category.includes(searchValue)){
+                if(data[i].category.toLowerCase().includes(searchValue)){
                     
                      table += `
                      <tr>
