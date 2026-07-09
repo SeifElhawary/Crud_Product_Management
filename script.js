@@ -67,6 +67,7 @@ createBtn.addEventListener('click' , function(){
         data[ indxUpd ] = newProduct;
         createBtn.innerHTML = 'Create Product';
         createBtn.style.backgroundColor = '#4278f7';
+mood = 'create'
     }
 
 
