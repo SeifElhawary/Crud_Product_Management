@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Product Mangement</title>
+    <link rel="icon" href="./Assets/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="topHeader">
+            <div class="left">
+                <a href="#"><img src="./Assets/logo.png" alt="Logo"></a>
+            </div>
+            <div class="right">
+                <a target="_blank"  class="linkedin" href="https://www.linkedin.com/in/seif-haitham-78733a37a/"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" class="github" href="https://github.com/SeifElhawary"><i class="fa-brands fa-github"></i></a>
+                    <a target="_blank" class="insta" href="https://www.instagram.com/just._.seif/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+      <div class="hero">
+            <video  autoplay loop muted  src="./Assets/bg.mp4"></video>
+        </div>
+        <div class="heroCover"></div>
+        <div class="herotext">
+            <h1>Streamline Your Inventory</h1>
+            <h2>Control, Track, and Manage Your Products in One Sleek Dashboard.</h2>
+            <a href="#section">Get Started</a>
+        </div>
+        <div class="title">
+            <h1 class="animate">PRODUCT MANAGEMENT</h1>
+        </div>
+        <section class="mangement" id="section">
+            <div class="head">
+                <h1 class="animateCyber">Initialize Product</h1>
+            </div>
+            <div class="inputContainer">
+                <input type="text" placeholder="Product Name " name="ProductName" id="name" >
+                <input type="text" placeholder="Product ID" name="ProductID" id="ID">
+                <div class="price">
+                    <input onkeyup="totalPrice()" type="number" placeholder="Price" name="Price" id="price">
+                    <input onkeyup="totalPrice()" type="number" placeholder="Taxes" name="Taxes" id="taxes">
+                    <input onkeyup="totalPrice()" type="number" placeholder="Ads" name="Ads" id="ads">
+                    <input onkeyup="totalPrice()" type="number" placeholder="Discount" name="Discount" id="discount">
+                    <span id="total-price"></span>
+                </div>
+                <input type="number" placeholder="How many?" name="Count" id="count">
+                <input type="text" placeholder="Category" name="Category" id="category">
+                <button id="create" type="submit" >Create Product</button>
+                
+            <div id="deleteAll"></div>
+            </div>
+            <div id="message" class="message">
+                <div class="img"> <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWYyYWRvMWxjNWMwcWxmY3NjanFyc281MTE3ajZrOWozMXE0czJuNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AzVmgQHpHX1vmv2oxx/giphy.gif" alt="">
+                    </div>
+                <p>The product has been successfully added</p>
+            </div>
+        </section>
+        <section class="products">
+            <div class="productsTitle">
+                <h1 class="animate-inventory">System Database</h1>
+            </div>
+            <div class="search">
+                <input id="search" type="search" placeholder="Search for Product">
+                <div class="searchBy">
+                    <button onclick="search(this.id)" id="searchName" type="submit">Search By Product Name</button>
+                <button onclick="search(this.id)" id="searchCategory" type="submit">Search By Product Category</button>
+            </div>
+            </div>
+            <table>
+                <tr>
+                    <th class="thColor">ID</th>
+                    <th class="thColor">Name</th>
+                    <th class="thColor">Category</th>
+                    <th class="thColor">Price</th>
+                    <th class="thColor">Taxes</th>
+                    <th class="thColor">Ads</th>
+                    <th class="thColor">Count</th>
+                    <th class="thColor">Total</th>
+                    <th class="thColor">Update</th>
+                    <th class="thColor">delete</th>
+                </tr>
+                <tbody id="tbody">
+                 
+                </tbody>
+            </table>
+        </section>
+        <script src="./script.js"></script>
+</body>
+</html>
