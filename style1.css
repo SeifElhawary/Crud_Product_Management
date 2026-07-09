@@ -134,15 +134,15 @@ header {
 }
 
 .title {
+     h1{
+        text-align: center;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     background-color: aliceblue;
     height: 22vh;
-    h1{
-        text-align: center;
-    }
 }
 
 .title h1 {
